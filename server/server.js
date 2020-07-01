@@ -4,15 +4,17 @@
 const express = require('express');
 const cors = require('cors');
 
+// Global Variables
+const PORT = 3000;
+
 // Initialize the App
 const app = express();
 app.use(cors());
 
-// Global Variables
-const PORT = 3000;
+
 
 // Route Definitions
-app.get('/todo', handleToDo());
+app.get('/todo', handleToDo);
 
 // Route Handlers
 function handleToDo(request, response) {
@@ -31,7 +33,7 @@ function handleToDo(request, response) {
 
 // Go!
 function startServer() {
-  express.listen(PORT, () => console.log('Server is running'));
+  app.listen(PORT, () => console.log('Server is running'));
 }
 
 startServer();
