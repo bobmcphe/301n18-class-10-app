@@ -14,7 +14,7 @@ app.use(cors());
 
 
 // Route Definitions
-app.get('/todo', handleToDo());
+app.get('/todo', handleToDo);
 
 // Route Handlers
 function handleToDo(request, response) {
@@ -33,7 +33,7 @@ function handleToDo(request, response) {
 
 // Go!
 function startServer() {
-  express.listen(PORT, () => console.log('Server is running'));
+  app.listen(PORT, () => console.log('Server is running'));
 }
 
 startServer();
