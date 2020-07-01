@@ -11,12 +11,11 @@ function renderThings(list) {
 
 function showThingsToDo() {
 
-  let things = [
-    { task: 'watch tv' },
-    { task: 'take a nap' },
-  ];
-
-  renderThings(things);
+  $.ajax('http://localhost:3000/todo')
+  .then(potato => {
+    console.log(potato);
+    renderThings(potato);
+  })
 
 }
 
