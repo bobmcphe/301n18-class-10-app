@@ -15,7 +15,9 @@ function showThingsToDo() {
     { thing: 'watch tv' },
     { thing: 'take a nap' },
   ];
-  renderThings(things);
+
+  let things2 = 'watch tv'
+  renderThings(things2);
 
 }
 
