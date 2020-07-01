@@ -21,6 +21,8 @@ function showThingsToDo() {
 
 }
 
+//this is dumb
+
 $(document).ready(function () {
   showThingsToDo();
 });
